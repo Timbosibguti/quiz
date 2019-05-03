@@ -34,6 +34,11 @@
 }
 @media(max-width: 556px){
 
+	.h3, h3 {
+    color: #020202;
+    font-size: 35px;
+}
+
 	.ui-slider-horizontal {
     height: 15px;
     background-color: #f1f5fb;
@@ -229,7 +234,7 @@
 @media(max-width: 375px){
 
 	.quizz {
-	background-position: left;
+	
 	background-size: 352%;
 	    min-height: calc(99vh - -8px);
 }
