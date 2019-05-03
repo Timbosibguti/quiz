@@ -231,6 +231,7 @@
 	.quizz {
 	background-position: left;
 	background-size: 352%;
+	    min-height: calc(99vh - -8px);
 }
 
 .quizz__label-pattern {
