@@ -230,6 +230,7 @@
 
 	.quizz {
 	background-position: left;
+	background-size: 352%;
 }
 
 .quizz__label-pattern {
@@ -292,9 +293,8 @@
     height: 40px;
 }
 .h3, h3 {
-    color: #737880;
+    color: #020202;
     font-size: 35px;
-
 }
 
 .quizz__tab>.row>.col-md-6{
