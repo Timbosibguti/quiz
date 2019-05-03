@@ -228,6 +228,10 @@
 
 @media(max-width: 375px){
 
+	.quizz {
+	background-position: left;
+}
+
 .quizz__label-pattern {
     width: calc(36% - 2rem);
 }
