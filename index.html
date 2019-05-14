@@ -11,10 +11,25 @@
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="page-quizz.js"></script>
 	<script src="jquery.mask.js"></script>
-
+	<script>var YANDEX_METRIKA_ID = "53486095"</script>
 	
 </head>
 <body>
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+   ym(YANDEX_METRIKA_ID, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/53486095" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
 <main class="quizz" id="quizz">
 	<svg class="quizz__svg-sprites" style="position: absolute; left: -9999px" xml:space="preserve" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<symbol viewBox="0 0 101 101" id="oldPattern2">
@@ -2368,7 +2383,7 @@ stroke-miterlimit="3" d="M334.05,313.61a10,10,0,0,1-4.64-6l-.91-3.37a10,10,0,0,0
 				<strong>+Секретный подарок</strong>
 			</div>
 		</div>
-		<form action="https://mos-bruschatka.ru/index.php?route=checkout/success" class="quizz__form js-quizz-form">
+		<form action="https://mos-bruschatka.ru/index.php?route=checkout/success" onsubmit="ym(YANDEX_METRIKA_ID, 'get_Result', 'opros');" method="POST" class="quizz__form js-quizz-form">
 			<div class="quizz__tabs js-quizz-tabs">
 				<div class="quizz__tab js-quizz-tab">
 					<h2 class="quizz__tab-title">Какой дизайн плитки вы хотите?</h2>
@@ -2672,30 +2687,33 @@ stroke-miterlimit="3" d="M334.05,313.61a10,10,0,0,1-4.64-6l-.91-3.37a10,10,0,0,0
 						<div class="col-md-6 js-quizz-showcase-container"></div>
 					</div>
 				</div>
-				<div class="quizz__showcase js-quizz-showcase">
-					<img src="image/catalog/calculator/calculator_bg.png" alt="" />
-					<img src="image/catalog/calculator/calculator_showcase_intro.png" class="js-quizz-showcase-img2" alt="" />
-					<div class="quizz__showcase-pattern js-quizz-showcase-pattern"></div>
-					<img src="image/catalog/calculator/calculator_showcase_car.png" alt="" />
-				</div>
-					<div class="quizz__tab js-quizz-tab js-calc-last-step">
-									<div class="quizz__form-control">
-										<p class="mb-10 h3">Спасибо за ответы!</p>
-										<p class="mb-20 text-normal text--gray">Заполните форму ниже для получения результатов расчета:</p>
-										<input type="text" required name="name" placeholder="Как к вам обращаться?" class="input input--fluid input--outline-highlight" />
-										<input type="tel" id="phone" required name="phone" placeholder="Телефон для консультации" class="input input--fluid input--outline-highlight" />
-										<input type="email" name="email" required placeholder="Электронный ящик для PDF каталога" class="input input--fluid input--outline-highlight" />
-										<button type="submit" class="btn btn--fluid btn--yellow">Получить результат
-											<img src="image/catalog/pdf.png" alt=""></button>
-										<div class="privacy-info"></div>
+									<div class="quizz__showcase js-quizz-showcase">
+										<img src="image/catalog/calculator/calculator_bg.png" alt="" />
+										<img src="image/catalog/calculator/calculator_showcase_intro.png" class="js-quizz-showcase-img2" alt="" />
+										<div class="quizz__showcase-pattern js-quizz-showcase-pattern"></div>
+										<img src="image/catalog/calculator/calculator_showcase_car.png" alt="" />
 									</div>
-								</div>
 			</div>
-			<div class="quizz__controls">
-				<button type="button" class="mt-10 btn-next-steps icon-long-arrow-pointing-to-the-right btn btn--inline btn--inline-one btn--yellow js-quizz-btn-next">К следующему шагу</button>
-				<ul class="quizz__steps js-quizz-steps"></ul>
-			</div>
+				<div class="quizz__controls">
+					<button type="button" class="mt-10 btn-next-steps icon-long-arrow-pointing-to-the-right btn btn--inline btn--inline-one btn--yellow js-quizz-btn-next">К следующему шагу</button>
+					<ul class="quizz__steps js-quizz-steps"></ul>
+				</div>
+
+					<div class="quizz__tab js-quizz-tab js-calc-last-step">
+												<div class="quizz__form-control">
+													<p class="mb-10 h3">Спасибо за ответы!</p>
+													<p class="mb-20 text-normal text--gray">Заполните форму ниже для получения результатов расчета:</p>
+													<input type="text" required name="name" placeholder="Как к вам обращаться?" class="input input--fluid input--outline-highlight" />
+													<input type="tel" id="phone" required name="phone" placeholder="Телефон для консультации" class="input input--fluid input--outline-highlight" />
+													<input type="email" name="email" required placeholder="Электронный ящик для PDF каталога" class="input input--fluid input--outline-highlight" />
+													<button type="submit" class="btn btn--fluid btn--yellow">Получить результат
+														<img src="image/catalog/pdf.png" alt=""></button>
+													<div class="privacy-info"></div>
+												</div>
+											</div>
 		</form>
+
+										
 			<div class="calculator-step__end" id="calcStepEnd" style="display: none;">
 			<div class="row">
 				<div class="col-8 m-auto calculator-step__end-inner">

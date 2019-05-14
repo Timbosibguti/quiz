@@ -21,6 +21,12 @@
 	let steps = $('#calcStepperInner > div').length;
 	let StepperNavItemClassName = 'js-calc-stepper';
 
+	$(form).on('submit', function(){
+		$('#tabs-0-0').prop('disabled', true);
+		$('#tabs-0-1').prop('disabled', true);
+
+	});
+
 	$(btnIntro).on('click', function() {
 		$(intro).hide();
 		$(form).fadeIn();
@@ -60,7 +66,6 @@
 	function inputChecker() {
 		$inputCurrentStepper = $(stepTab).eq(stepIndex).find('input[type="radio"]:visible').not('input[name="tabs-0"]');
 		$checkedInputCurrentStepper = $inputCurrentStepper.filter(':checked');
-		console.log($checkedInputCurrentStepper.length)
 		controls();
 	}
 
@@ -73,6 +78,10 @@
 	}
 
 	function switchToTab(nextStepIndex) {
+		if (nextStepIndex > 0){
+		ym(YANDEX_METRIKA_ID, 'opros_step' + (nextStepIndex), 'opros');
+		console.log( 'opros_step' + (nextStepIndex))
+	}
 		// Tab
 		$(stepTab).eq(stepIndex).hide();
 		$(stepTab).eq(nextStepIndex).show();
@@ -120,44 +129,7 @@
 
 		inputChecker();
 	});
-	$('.js-quizz-form').on('submit', function(e) {
-		e.preventDefault();
-		let $self = $(this);
-		let formTitle = $self.data('form-title');
-		let $submitBtn = $self.find('[type="submit"]');
-		let data = $self.serialize() + '&title=' + encodeURIComponent(formTitle);
-		let stateBtnText = [$submitBtn.html(), 'Отправляем', 'Отправлено'];
 
-		$self.find(`input`).removeClass('input-error');
-
-		$.ajax({
-			
-			beforeSend: function() {
-				$submitBtn.attr('disabled', 'disabled').html(stateBtnText[1]);
-			},
-			complete: function() {
-			}
-		}).done(function(response) {
-			if (response['error']) {
-				for (let i in response['error']) {
-					$self.find(`input[name="${i}"]`).effect('shake', shakeUiConfig);
-				}
-			} else {
-				$self.hide();
-				$('#calcStepEnd').fadeIn();
-			}
-
-			setTimeout(() => {
-				if (response['error'] || response['status'] !== 'send') {
-					$submitBtn.removeAttr('disabled').html(stateBtnText[0]);
-				} else {
-					$submitBtn.removeClass('flashed').addClass('btn--success').html(stateBtnText[2]);
-				}
-			}, 300);
-		}).always(function() {
-
-		});
-	});
 
 
 	$('#calcResetForm').on('click', function() {
@@ -250,6 +222,94 @@
 	stepperInit();
 	labelSelection();
 	$(".js-quizz-form").trigger('reset');
+
+
+
+
+var supportTouch = $.support.touch,
+        scrollEvent = "touchmove scroll",
+ 		touchStartEvent = supportTouch ? "touchstart" : "mousedown",
+        touchStopEvent = supportTouch ? "touchend" : "mouseup",
+        touchMoveEvent = supportTouch ? "touchmove" : "mousemove";
+ 
+    // handles swipe up and swipe down
+    $.event.special.swipeupdown = {
+        setup: function () {
+            var thisObject = this;
+            var $this = $(thisObject);
+ 
+            $this.bind(touchStartEvent, function (event) {
+                var data = event.originalEvent.touches ?
+                        event.originalEvent.touches[ 0 ] :
+                        event,
+                    start = {
+                        time: (new Date).getTime(),
+                        coords: [ data.pageX, data.pageY ],
+                        origin: $(event.target)
+                    },
+                    stop;
+ 
+                function moveHandler(event) {
+                    if (!start) {
+                        return;
+                    }
+ 
+                    var data = event.originalEvent.touches ?
+                        event.originalEvent.touches[ 0 ] :
+                        event;
+                    stop = {
+                        time: (new Date).getTime(),
+                        coords: [ data.pageX, data.pageY ]
+                    };
+ 
+                    // prevent scrolling
+                    if (Math.abs(start.coords[1] - stop.coords[1]) > 10) {
+                        event.preventDefault();
+                    }
+                }
+ 
+                $this
+                    .bind(touchMoveEvent, moveHandler)
+                    .one(touchStopEvent, function (event) {
+                        $this.unbind(touchMoveEvent, moveHandler);
+                        if (start && stop) {
+                            if (stop.time - start.time < 1000 &&
+                                Math.abs(start.coords[1] - stop.coords[1]) > 30 &&
+                                Math.abs(start.coords[0] - stop.coords[0]) < 75) {
+                                start.origin
+                                    .trigger("swipeupdown")
+                                    .trigger(start.coords[1] > stop.coords[1] ? "swipeup" : "swipedown");
+                            }
+                        }
+                        start = stop = undefined;
+                    });
+            });
+        }
+    };
+ 
+//Adds the events to the jQuery events special collection
+    $.each({
+        swipedown: "swipeupdown",
+        swipeup: "swipeupdown"
+    }, function (event, sourceEvent) {
+        $.event.special[event] = {
+            setup: function () {
+                $(this).bind(sourceEvent, $.noop);
+            }
+        };
+    });
+  $('.js-quizz-showcase').on('click', function(){
+  		$('.js-quizz-showcase').toggleClass('quizz__showcase__open')
+  });
+ $(document).on('swipedown',function(){
+
+ 	$('.js-quizz-showcase').addClass('quizz__showcase__open')
+
+} );
+  $(document).on('swipeup',function(){
+
+  	$('.js-quizz-showcase').removeClass('quizz__showcase__open')
+} );
 });
 
 !function (a){
@@ -278,3 +338,5 @@
 	var b=this;
 	b.element.unbind({touchstart:a.proxy(b, "_touchStart"), touchmove:a.proxy(b, "_touchMove"), touchend:a.proxy(b, "_touchEnd")}),
 	d.call(b)}}}(jQuery);
+
+
