@@ -454,7 +454,7 @@ margin-left: 8px;
     width: 200px;
     vertical-align: middle;
     padding: 0;
-    position: fixed;
+    position: absolute;
     bottom: 9%;
     border-radius: 50px;
     left: 10%;
