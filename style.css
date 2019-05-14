@@ -518,16 +518,25 @@ margin-left: 8px;
 
 .quizz__tab {
     text-align: center;
-    position: fixed;
-    top: 30%;
-    left: 5%;
-    width: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .btn--inline-one {
-    
-    bottom: 8%;
-  
+    bottom: 10%;
+    left: 5%;
+    height: 8vh;
+}
+
+.quizz__steps {
+    left: 12%;
+}
+
+.quizz__label-color {
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .quizz__label-product {
@@ -545,6 +554,12 @@ margin-left: 8px;
 	width: 100%;
 	padding: 0;
 	margin: 0;
+}
+
+.quizz__form-control .btn--yellow {
+    width: 88%;
+    margin-left: 7%;
+    height: 11vh;
 }
 }
 
