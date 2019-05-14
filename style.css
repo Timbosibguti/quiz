@@ -450,15 +450,11 @@ margin-left: 8px;
 }
 
 .btn--inline-one {
-    display: inline-block;
     width: 200px;
-    vertical-align: middle;
-    padding: 0;
-    position: absolute;
     bottom: 9%;
-    border-radius: 50px;
     left: 10%;
     width: 18em;
+    height: 9vh;
 }
 .btn--yellow img {
     height: 28px;
