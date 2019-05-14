@@ -468,6 +468,8 @@ margin-left: 8px;
     background-color: #ffaf00;
     color: #333;
     border-radius: 50px;
+    height: 9vh;
+    width: 18em;
 }
 .h3, h3 {
     color: #020202;
