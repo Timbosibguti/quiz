@@ -232,7 +232,7 @@ margin-left: 8px;
     text-align: center;
     vertical-align: bottom;
     margin-top: 10%;
-    position: fixed;
+    position: absolute;
     float: right;
     left: 20%;
     bottom: 3%;
@@ -272,7 +272,7 @@ margin-left: 8px;
 }
 
 .container--constraint {
-    height: 100%;
+    height: 100vh;
     position: absolute;
     padding: 0;
 }
@@ -376,7 +376,7 @@ margin-left: 8px;
     width: 200px;
     vertical-align: middle;
     padding: 0;
-    position: fixed;
+    position: absolute;
     bottom: 10%;
     height: 74px;
     width: 80%;
@@ -454,9 +454,10 @@ margin-left: 8px;
     vertical-align: middle;
     padding: 0;
     position: fixed;
-    bottom: 8%;
+    bottom: 9%;
     border-radius: 50px;
     left: 10%;
+    height: 
 }
 .btn--yellow img {
     height: 28px;
