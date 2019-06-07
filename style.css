@@ -626,6 +626,12 @@ margin-left: 8px;
 .footer {
     margin-top: 26%;
 }
+
+.footer p {
+    font-size: 0.6em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
 }
 @media(max-width: 375px){
 
