@@ -622,6 +622,10 @@ margin-left: 8px;
 .quizz__tab-title {
     margin: 0;
 }
+
+.footer {
+    margin-top: 26%;
+}
 }
 @media(max-width: 375px){
 
