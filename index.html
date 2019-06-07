@@ -27,6 +27,21 @@
         webvisor:true
    });
 </script>
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1236784053129872');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1236784053129872&ev=PageView&noscript=1"
+/></noscript>
 <noscript><div><img src="https://mc.yandex.ru/watch/53486095" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
 
@@ -2374,15 +2389,28 @@ stroke-miterlimit="3" d="M334.05,313.61a10,10,0,0,1-4.64-6l-.91-3.37a10,10,0,0,0
 	</svg>
 	<div class="container container--constraint">
 		<div class="quizz__intro js-quizz-intro">
-			<h1 class="quizz__intro-title">Выберите модель плитки</h1>
-			<h2 class="quizz__intro-sub-title">И получите индивидуальный дизайн проект</h2>
-			<p class="quizz__intro-description">Пройди опрос из 5 шагов и Бесплатно узнай сколько стоит облагородить твою лужайку!</p>
-			<button type="button" class="btn btn--inline btn--yellow icon-long-arrow-pointing-to-the-right quizz__intro-btn js-start-quizz">Начать опрос</button>
-			<div class="quizz__intro-inline-info">
-				<p class="text--light-gray">Индивидуальный дизайн-проект</p>
-				<strong>+Секретный подарок</strong>
-			</div>
-		</div>
+				<img class="logo" src="image/logo.png" alt="">
+				<h1 class="quiz-title">Пройдите тест за <span class="media-orange">2 минуты</span> и узнайте <br> точную <span class="media-orange">cтоимость тротуарной плитки и укладки</span></h1>
+				<p class="start-p">Вы получите точную смету, расчет материалов, дизайн проект
+				<img class="row-img" src="image/row.png" alt=""></p>
+
+				<button type="button" class="btn-start js-start-quizz">Расчитать стоимость <img src="image/play.png" alt=""></button>
+				<img class="rep" src="image/rep.png" alt="">
+				<div class="footer">
+					<div class="footer-items">
+						<h2>200+</h2>
+						<p>Реализованных проектов</p>
+					</div>
+					<div class="footer-items">
+						<h2>250+</h2>
+						<p>Видов плитки</p>
+					</div>
+					<div class="footer-items">
+						<h2>120 Схем</h2>
+						<p>Кладки тротуарной плитки</p>
+					</div>
+				</div>
+			</div> 
 		<form action="https://mos-bruschatka.ru/index.php?route=checkout/success" onsubmit="ym(YANDEX_METRIKA_ID, 'get_Result', 'opros');" method="POST" class="quizz__form js-quizz-form">
 			<div class="quizz__tabs js-quizz-tabs">
 				<div class="quizz__tab js-quizz-tab">
