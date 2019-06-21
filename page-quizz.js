@@ -14,13 +14,16 @@
 	let stateCompletedClassName = 'completed';
 	let $inputCurrentStepper = '';
 	let $checkedInputCurrentStepper = '';
+	let $textInputCurrentStepper = '';
+	let $checkedTextInputCurrentStepper = '';
 	let showcase = '.js-quizz-showcase';
 	let showcaseContainer = '.js-quizz-showcase-container';
 	let showcasePattern = '.js-quizz-showcase-pattern';
 	let showcaseImg2 = '.js-quizz-showcase-img2';
 	let steps = $('#calcStepperInner > div').length;
 	let StepperNavItemClassName = 'js-calc-stepper';
-
+	let closePopup = '.js-close-popup';
+	let placeInput = ".place-input";
 	$(form).on('submit', function(){
 		$('#tabs-0-0').prop('disabled', true);
 		$('#tabs-0-1').prop('disabled', true);
@@ -49,7 +52,7 @@
 			}
 		}
 	});
-
+	
 	$(btnNext).on('click', function() {
 		let nextStepIndex = stepIndex + 1;
 
@@ -62,26 +65,56 @@
 		}
 
 	});
-
+	$(closePopup).on('click', function(){
+		ym(YANDEX_METRIKA_ID, 'opros_step' + (nextStepIndex), 'opros');
+		console.log('opros_step' + (nextStepIndex));
+		$("#phone").removeAttr("disabled");
+		$(".js-popup-phone").attr("disabled","disabled");
+		$(".popup").hide();
+		var nextStepIndex=$(stepTab).length-1;
+		// Tab
+		$(stepTab).eq(nextStepIndex).fadeIn();
+	})
+	$(placeInput).on('input',function(){
+	  inputChecker();
+	})
+	
+	 
 	function inputChecker() {
 		$inputCurrentStepper = $(stepTab).eq(stepIndex).find('input[type="radio"]:visible').not('input[name="tabs-0"]');
 		$checkedInputCurrentStepper = $inputCurrentStepper.filter(':checked');
+		
+		$textInputCurrentStepper = $(stepTab).eq(stepIndex).find('.place-input');
+		$textInputCurrentStepper.each(function() {
+  			$(this).attr('value', $(this).val())
+		});
+		$checkedTextInputCurrentStepper = $textInputCurrentStepper.filter(':not([value=\'\'])');
 		controls();
 	}
 
 	function controls() {
-		if ($inputCurrentStepper.length > 0 && $checkedInputCurrentStepper.length < 2) {
+		console.log("1", $inputCurrentStepper.length > 0 && $checkedInputCurrentStepper.length < 1)
+		console.log("2", $checkedTextInputCurrentStepper.length)
+		if ($inputCurrentStepper.length > 0 && $checkedInputCurrentStepper.length < 1 || $textInputCurrentStepper.length > 0 && $checkedTextInputCurrentStepper.length < 2) {
 			$(btnNext).attr('disabled', 'disabled');
 		} else {
 			$(btnNext).removeAttr('disabled');
 		}
 	}
-
-	function switchToTab(nextStepIndex) {
-		if (nextStepIndex > 0){
-		ym(YANDEX_METRIKA_ID, 'opros_step' + (nextStepIndex), 'opros');
-		console.log( 'opros_step' + (nextStepIndex))
+	function popup(){
+		$("#phone").attr("disabled","disabled");
+		$(".js-quizz-tabs").hide();
+		$(".popup").fadeIn();
 	}
+	function switchToTab(nextStepIndex) {
+		if (nextStepIndex == $(stepTab).length-1){
+			popup();
+			return;
+		}
+		if (nextStepIndex > 0){
+			ym(YANDEX_METRIKA_ID, 'opros_step' + (nextStepIndex), 'opros');
+			console.log('opros_step' + (nextStepIndex));
+		}
 		// Tab
 		$(stepTab).eq(stepIndex).hide();
 		$(stepTab).eq(nextStepIndex).show();
@@ -107,7 +140,6 @@
 		let inputValue = self.value;
 
 		if (inputName === 'product') {
-			stepIndex = $(this).closest(stepTab).index();
 			for (let i = stepIndex; i < $(stepTab).length; i++) {
 				$(stepListItem).eq(i).removeClass(stateCompletedClassName);
 			}
@@ -125,6 +157,9 @@
 			$('#quizz .user-color-1').css('fill', `${inputValue}`);
 		} else if (inputName === 'color2') {
 			$('#quizz .user-color-2').css('fill', `${inputValue}`);
+		}
+		else if (inputName === 'Sposob-svyazi') {
+			$('.js-end-data').slideDown();
 		}
 
 		inputChecker();
@@ -193,14 +228,6 @@
 				$('#calcStepperSurface').val( ui.value );
 			}
 		});
-	}
-
-	function controls() {
-		if($inputCurrentStepper.length > 0 && $checkedInputCurrentStepper.length < 1) {
-			$(btnNext).attr('disabled', 'disabled');
-		} else {
-			$(btnNext).removeAttr('disabled');
-		}
 	}
 
 	function monitorCurrentStepper() {
@@ -312,6 +339,11 @@ var supportTouch = $.support.touch,
 } );
 });
 
+
+  	
+
+
+
 !function (a){
 	function f(a , b){
 		if(!(a.originalEvent.touches.length>1)){
@@ -338,5 +370,9 @@ var supportTouch = $.support.touch,
 	var b=this;
 	b.element.unbind({touchstart:a.proxy(b, "_touchStart"), touchmove:a.proxy(b, "_touchMove"), touchend:a.proxy(b, "_touchEnd")}),
 	d.call(b)}}}(jQuery);
+
+
+
+
 
 

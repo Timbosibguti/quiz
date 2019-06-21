@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 	<link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+	<link href="webfonts/FontAwesome.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="page-quizz.js"></script>
@@ -2387,9 +2388,10 @@ stroke-miterlimit="3" d="M334.05,313.61a10,10,0,0,1-4.64-6l-.91-3.37a10,10,0,0,0
 				</path>
 			</symbol>
 	</svg>
+
+	<img class="logo" src="image/logo.png" alt="">
 	<div class="container container--constraint">
 		<div class="quizz__intro js-quizz-intro">
-				<img class="logo" src="image/logo.png" alt="">
 				<h1 class="quiz-title">Пройдите тест за <span class="media-orange">2 минуты</span> и узнайте <br> точную <span class="media-orange">cтоимость тротуарной плитки и укладки</span></h1>
 				<p class="start-p">Вы получите точную смету, расчет материалов, дизайн проект
 				<img class="row-img" src="image/row.png" alt=""></p>
@@ -2411,201 +2413,275 @@ stroke-miterlimit="3" d="M334.05,313.61a10,10,0,0,1-4.64-6l-.91-3.37a10,10,0,0,0
 					</div>
 				</div>
 			</div> 
+
 		<form action="https://mos-bruschatka.ru/index.php?route=checkout/success" onsubmit="ym(YANDEX_METRIKA_ID, 'get_Result', 'opros');" method="POST" class="quizz__form js-quizz-form">
 			<div class="quizz__tabs js-quizz-tabs">
 				<div class="quizz__tab js-quizz-tab">
-					<h2 class="quizz__tab-title">Какой дизайн плитки вы хотите?</h2>
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-7">
+							<div class="md-6-title">
+								<h2 class="quizz__tab-title">Выберите место <br> укладки</h2>
+							</div>
+							<label class="label-first label-radio  js-label-selection">
+								<input type="radio" name="type" value="dvor" />
+								<h3>Двор</h3>
+								<p>Товарищи! Консультация с широким активом в значительной степени обуславливает создание направлений прогрессивного развития. Разнообразный и богайтый опыт реализация</p>
+								<i class="fas check fa-check"></i>
+							</label>
+							<label class="label-first label-radio js-label-selection">
+								<input type="radio" name="type" value="garaj-stoyanka" />
+								<h3>Гараж <br> /Стоянка</h3>
+								<p>Товарищи! Консультация с широким активом в значительной степени обуславливает создание направлений прогрессивного развития. Разнообразный и богайтый опыт реализация</p>
+								<i class="fas check fa-check"></i>
+							</label>
+							<label class="label-first label-radio js-label-selection">
+								<input type="radio" name="type" value="doroga" />
+								<h3>Проезжая часть</h3>
+								<p>Товарищи! Консультация с широким активом в значительной степени обуславливает создание направлений прогрессивного развития. Разнообразный и богайтый опыт реализация</p>
+								<i class="fas check fa-check"></i>
+							</label>
+						</div>
+						<div class="col-md-5 js-quizz-showcase-container"></div>
+					</div>
+				</div>
+				<div class="quizz__tab js-quizz-tab">
+					<div class="row">
+						<div class="col-md-7">
+							<div class="md-6-title">
+								<h2 class="quizz__tab-title">Какой дизайн плитки <br> вы хотите?</h2>
+							</div>	
 							<div class="quizz__tab-inner quizz__tab-inner--products js-quizz-tab-inner">
 								<label class="js-label-selection label-radio quizz__label-product">
 									<img src="image/catalog/banners/1v6f-240x140.jpg" alt="" />
-									<p class="quizz__label-product-name">Волна 1В6Ф</p>
 									<input type="radio" name="product" value="Волна 1В6Ф" />
+									<i class="fas check fa-check"></i>
 								</label>
 								<label class="js-label-selection label-radio quizz__label-product">
 									<img src="image/catalog/banners/0-240x140.png" alt="" />
-									<p class="quizz__label-product-name">Квадрат 1К5Ф</p>
 									<input type="radio" name="product" value="Квадрат 1К5Ф" />
+									<i class="fas check fa-check"></i>
 								</label>
 								<label class="js-label-selection label-radio quizz__label-product">
 									<img src="image/catalog/banners/1rd10-240x140.jpg" alt="" />
-									<p class="quizz__label-product-name">Газонный камень 1РД10</p>
 									<input type="radio" name="product" value="Газонный камень 1РД10" />
+									<i class="fas check fa-check"></i>
 								</label>
 								<label class="js-label-selection label-radio quizz__label-product">
 									<img src="image/catalog/banners/2p8f-240x140.jpg" alt="" />
-									<p class="quizz__label-product-name">Брусчаттка 2П8Ф</p>
 									<input type="radio" name="product" value="Брусчаттка 2П8Ф" />
+									<i class="fas check fa-check"></i>
 								</label>
 								<label class="js-label-selection label-radio quizz__label-product">
 									<img src="image/catalog/banners/1-240x140.png" alt="" />
-									<p class="quizz__label-product-name">Старый город 1СГ5Ф</p>
 									<input type="radio" name="product" value="Старый город 1СГ5Ф" />
+									<i class="fas check fa-check"></i>
 								</label>
 								<label class="js-label-selection label-radio quizz__label-product">
 									<img src="image/catalog/banners/02-240x140.png" alt="" />
-									<p class="quizz__label-product-name">Классика 1КЛ6Ф</p>
 									<input type="radio" name="product" value="Классика 1КЛ6Ф" />
+									<i class="fas check fa-check"></i>
 								</label>
 								
 							</div>
 						</div>
-						<div class="col-md-6 js-quizz-showcase-container"></div>
+						<div class="col-md-5 js-quizz-showcase-container"></div>
 					</div>
 				</div>
 				<div class="quizz__tab js-quizz-tab">
-					<h2 class="quizz__tab-title">Выберите узор плитки:</h2>
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-7">
+							<div class="md-6-title">
+								<h2 class="quizz__tab-title">Выберите узор плитки:</h2>
+							</div>
 							<div class="quizz__tab-inner quizz__tab-inner--patterns js-quizz-tab-inner">
 									<label class="js-label-selection js-quizz-pattern label-radio quizz__label-pattern" data-product="Волна 1В6Ф" style="display: none;">
 										<img src="image/catalog/calculator/patterns/volnaPattern1.png" alt="" >
 										<input type="radio" name="pattern" value="volnaPattern1" class="input-radio">
+										<i class="fas check fa-check"></i>
 									</label>
 									<label class="js-label-selection js-quizz-pattern label-radio quizz__label-pattern" data-product="Волна 1В6Ф" style="display: none;">
 										<img src="image/catalog/calculator/patterns/volnaPattern2.png" alt="">
 										<input type="radio" name="pattern" value="volnaPattern2" class="input-radio">
+										<i class="fas check fa-check"></i>
 									</label>
 									<label class="js-label-selection js-quizz-pattern label-radio quizz__label-pattern" data-product="Волна 1В6Ф" style="display: none;">
 										<img src="image/catalog/calculator/patterns/volnaPattern3.png" alt="">
 										<input type="radio" name="pattern" value="volnaPattern3" class="input-radio">
+										<i class="fas check fa-check"></i>
 									</label>
 									<label class="js-label-selection js-quizz-pattern label-radio quizz__label-pattern" data-product="Волна 1В6Ф" style="display: none;">
 										<img src="image/catalog/calculator/patterns/volnaPattern4.png" alt="">
 										<input type="radio" name="pattern" value="volnaPattern4" class="input-radio">
+										<i class="fas check fa-check"></i>
 									</label>
 									<label class="js-label-selection js-quizz-pattern label-radio quizz__label-pattern" data-product="Квадрат 1К5Ф" style="display: none;">
 										<img src="image/catalog/calculator/patterns/kvadratPattern1.png"  alt="">
 										<input type="radio" name="pattern" value="kvadratPattern1" class="input-radio">
+										<i class="fas check fa-check"></i>
 									</label>
 									<label class="js-label-selection js-quizz-pattern label-radio quizz__label-pattern" data-product="Квадрат 1К5Ф" style="display: none;">
 										<img src="image/catalog/calculator/patterns/kvadratPattern2.png" alt="">
 										<input type="radio" name="pattern" value="kvadratPattern2" class="input-radio">
+										<i class="fas check fa-check"></i>
 									</label>
 									<label class="js-label-selection js-quizz-pattern label-radio quizz__label-pattern" data-product="Квадрат 1К5Ф" style="display: none;">
 										<img src="image/catalog/calculator/patterns/kvadratPattern3.png" alt="">
 										<input type="radio" name="pattern" value="kvadratPattern3" class="input-radio">
+										<i class="fas check fa-check"></i>
 									</label>
 									<label class="js-label-selection js-quizz-pattern label-radio quizz__label-pattern" data-product="Газонный камень 1РД10" style="display: none;">
 										<img src="image/catalog/calculator/patterns/gkamenPattern1.png" alt="">
 										<input type="radio" name="pattern" value="gkamenPattern1" class="input-radio">
+										<i class="fas check fa-check"></i>
 									</label>
 									<label class="js-label-selection js-quizz-pattern label-radio quizz__label-pattern" data-product="Брусчаттка 2П8Ф" style="display: none;">
 										<img src="image/catalog/calculator/patterns/brusPattern1.png" alt="">
 										<input type="radio" name="pattern" value="brusPattern1" class="input-radio">
+										<i class="fas check fa-check"></i>
 									</label>
 									<label class="js-label-selection js-quizz-pattern label-radio quizz__label-pattern" data-product="Брусчаттка 2П8Ф" style="display: none;">
 										<img src="image/catalog/calculator/patterns/brusPattern2.png" alt="">
 										<input type="radio" name="pattern" value="brusPattern2" class="input-radio">
+										<i class="fas check fa-check"></i>
 									</label>
 									<label class="js-label-selection js-quizz-pattern label-radio quizz__label-pattern" data-product="Брусчаттка 2П8Ф" style="display: none;">
 										<img src="image/catalog/calculator/patterns/brusPattern3.png" alt="">
 										<input type="radio" name="pattern" value="brusPattern3" class="input-radio">
+										<i class="fas check fa-check"></i>
 									</label>
 									<label class="js-label-selection js-quizz-pattern label-radio quizz__label-pattern" data-product="Брусчаттка 2П8Ф" style="display: none;">
 										<img src="image/catalog/calculator/patterns/brusPattern4.png" alt="">
 										<input type="radio" name="pattern" value="brusPattern4" class="input-radio">
+										<i class="fas check fa-check"></i>
 									</label>
 									<label class="js-label-selection js-quizz-pattern label-radio quizz__label-pattern" data-product="Старый город 1СГ5Ф" style="display: none;">
 										<img src="image/catalog/calculator/patterns/oldPattern1.png" alt="">
 										<input type="radio" name="pattern" value="oldPattern1" class="input-radio">
+										<i class="fas check fa-check"></i>
 									</label>
 									<label class="js-label-selection js-quizz-pattern label-radio quizz__label-pattern" data-product="Старый город 1СГ5Ф" style="display: none;">
 										<img src="image/catalog/calculator/patterns/oldPattern2.png" alt="">
 										<input type="radio" name="pattern" value="oldPattern2" class="input-radio">
+										<i class="fas check fa-check"></i>
 									</label>
 									<label class="js-label-selection js-quizz-pattern label-radio quizz__label-pattern" data-product="Классика 1КЛ6Ф" style="display: none;">
 										<img src="image/catalog/calculator/patterns/classicPattern1.png" alt="">
 										<input type="radio" name="pattern" value="classicPattern1" class="input-radio">
+										<i class="fas check fa-check"></i>
 									</label>
 									<label class="js-label-selection js-quizz-pattern label-radio quizz__label-pattern" data-product="Классика 1КЛ6Ф" style="display: none;">
 										<img src="image/catalog/calculator/patterns/classicPattern2.png" alt="">
 										<input type="radio" name="pattern" value="classicPattern2" class="input-radio">
+										<i class="fas check fa-check"></i>
 									</label>
 									<label class="js-label-selection js-quizz-pattern label-radio quizz__label-pattern" data-product="Классика 1КЛ6Ф" style="display: none;">
 										<img src="image/catalog/calculator/patterns/classicPattern3.png" alt="">
 										<input type="radio" name="pattern" value="classicPattern3" class="input-radio">
+										<i class="fas check fa-check"></i>
 									</label>
 																								</div>
 						</div>
-						<div class="col-md-6 js-quizz-showcase-container"></div>
+						<div class="col-md-5 js-quizz-showcase-container"></div>
 					</div>
 				</div>
 				<div class="quizz__tab js-quizz-tab">
-					<h2 class="quizz__tab-title">Выберите цвет:</h2>
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-7">
+							<div class="md-6-title">
+								<h2 class="quizz__tab-title">Выберите цвет:</h2>
+							</div>
 							<div class="quizz__tab-inner quizz__tab-inner--colors js-quizz-tab-inner">
-								<span class="mr-5">Цвет 1: </span>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #7b7370;">
+								<h3 class="col-md-1">Цвет 1</h3>
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #7b7370;">
 									<input type="radio" name="color1" data-color-name="Серый" value="#7b7370" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #cebbaa;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #cebbaa;">
 									<input type="radio" name="color1" data-color-name="Песочный" value="#cebbaa" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #725452;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #725452;">
 									<input type="radio" name="color1" data-color-name="Красно-коричневый" value="#725452" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #4e4e50;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #4e4e50;">
 									<input type="radio" name="color1" data-color-name="Черный" value="#4e4e50" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #835d5c;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #835d5c;">
 									<input type="radio" name="color1" data-color-name="Красный" value="#835d5c" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #62504e;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #62504e;">
 									<input type="radio" name="color1" data-color-name="Коричневый" value="#62504e" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #a28c81;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #a28c81;">
 									<input type="radio" name="color1" data-color-name="Бежевый" value="#a28c81" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #7e8772;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #7e8772;">
 									<input type="radio" name="color1" data-color-name="Зеленый" value="#7e8772" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #6f8087;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #6f8087;">
 									<input type="radio" name="color1" data-color-name="Синий" value="#6f8087" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #a16c4c;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #a16c4c;">
 									<input type="radio" name="color1" data-color-name="Персиковый" value="#a16c4c" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #a59559;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #a59559;">
 									<input type="radio" name="color1" data-color-name="Желтый" value="#a59559" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
 							</div>
 							<div class="quizz__tab-inner quizz__tab-inner--colors js-quizz-tab-inner">
-								<span class="mr-5">Цвет 2: </span>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #7b7370;">
+								<h3 class="col-md-1">Цвет 2</h3>
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #7b7370;">
 									<input type="radio" name="color2" data-color-name="Серый" value="#7b7370" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #cebbaa;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #cebbaa;">
 									<input type="radio" name="color2" data-color-name="Песочный" value="#cebbaa" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #725452;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #725452;">
 									<input type="radio" name="color2" data-color-name="Красно-коричневый" value="#725452" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #4e4e50;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #4e4e50;">
 									<input type="radio" name="color2" data-color-name="Черный" value="#4e4e50" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #835d5c;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #835d5c;">
 									<input type="radio" name="color2" data-color-name="Красный" value="#835d5c" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #62504e;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #62504e;">
 									<input type="radio" name="color2" data-color-name="Коричневый" value="#62504e" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #a28c81;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #a28c81;">
 									<input type="radio" name="color2" data-color-name="Бежевый" value="#a28c81" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #7e8772;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #7e8772;">
 									<input type="radio" name="color2" data-color-name="Зеленый" value="#7e8772" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #6f8087;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #6f8087;">
 									<input type="radio" name="color2" data-color-name="Синий"	value="#6f8087" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #a16c4c;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #a16c4c;">
 									<input type="radio" name="color2" data-color-name="Персиковый" value="#a16c4c" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
-								<label class="js-label-selection label-radio quizz__label-color" style="background-color: #a59559;">
+								<label class="js-label-selection col-md-1 label-radio quizz__label-color" style="background-color: #a59559;">
 									<input type="radio" name="color2" data-color-name="Желтый" value="#a59559" class="input-radio">
+									<i class="fas check fa-check"></i>
 								</label>
 							</div>
 
@@ -2613,7 +2689,7 @@ stroke-miterlimit="3" d="M334.05,313.61a10,10,0,0,1-4.64-6l-.91-3.37a10,10,0,0,0
  		<ul>
 		    <li>
 			     <input type="radio" name="tabs-0" checked="checked" id="tabs-0-0" />
-					<label for="tabs-0-0">Цвет 1: <br> <span class="js-color-name">Не выбрано</span></label>
+					<label for="tabs-0-0">Цвет 1 <br> <span class="js-color-name">Не выбрано</span></label>
 					     <div>
 					       <div class="quizz__tab-inner quizz__tab-inner--colors js-quizz-tab-inner">
 								
@@ -2655,7 +2731,7 @@ stroke-miterlimit="3" d="M334.05,313.61a10,10,0,0,1-4.64-6l-.91-3.37a10,10,0,0,0
    </li>
    <li>
      <input type="radio" name="tabs-0" id="tabs-0-1" />
-       <label for="tabs-0-1">Цвет 2: <br> <span class="js-color-name">Не выбрано</span></label>
+       <label for="tabs-0-1">Цвет 2 <br> <span class="js-color-name">Не выбрано</span></label>
 						<div>
      						<div class="quizz__tab-inner quizz__tab-inner--colors js-quizz-tab-inner">
 								
@@ -2698,50 +2774,103 @@ stroke-miterlimit="3" d="M334.05,313.61a10,10,0,0,1-4.64-6l-.91-3.37a10,10,0,0,0
  				 </ul>
 			</div>
 		</div>
-						<div class="col-md-6 js-quizz-showcase-container"></div>
+						<div class="col-md-5 js-quizz-showcase-container"></div>
 					</div>
 				</div>
 				<div class="quizz__tab js-quizz-tab">
-					<h2 class="quizz__tab-title">Укажите площадь укладки:</h2>
 					<div class="row">
-						<div class="col-md-6">
-							<div class="quizz__tab-inner js-quizz-tab-inner">
-								<div class="calculator-stepper__slider">
-									<div id="calcStepperSlider"></div>
-								</div>
-								<span class="quizz__surface-value"><input type="number" name="surface" min="30" max="600" value="30" id="calcStepperSurface" read-only="read-only">м<sup><small>2</small></sup></input></span>
+						<div class="col-md-7">
+							<div class="md-6-title">
+								<h2 class="quizz__tab-title">Площадь укладки + <br> дополнительные услугу</h2>
+							</div>
+							<div class="quizz__tab-inner place js-quizz-tab-inner">
+								<label class="place-label">
+									<input class="place-input" name="Ploshad-ukladki" type="num" value="" placeholder="Укажите площадь укладки">
+									</input>
+									<input class="place-input" type="text" name="Adress-delivery" value="" placeholder="Укажите адрес доставки">
+									</input>
+									<div>
+									  <input type="checkbox" id="podschitat-ukladku" name="podschitat-ukladku"
+									         checked>
+									  <label for="podschitat-ukladku">Подсчитать укладку (от 450 р. за м<sup>2</sup>)</label>
+									  </div>
+									  <div>
+									    <input type="checkbox" id="dostavka-nujna" name="dostavka-nujna"
+									         checked>
+									  <label for="dostavka-nujna">Подсчитать доставку (от 10 р. за км)</label>
+									</div>
+								</label>
 							</div>
 						</div>
-						<div class="col-md-6 js-quizz-showcase-container"></div>
+						<div class="col-md-5 js-quizz-showcase-container"></div>
 					</div>
 				</div>
 									<div class="quizz__showcase js-quizz-showcase">
 										<img src="image/catalog/calculator/calculator_bg.png" alt="" />
-										<img src="image/catalog/calculator/calculator_showcase_intro.png" class="js-quizz-showcase-img2" alt="" />
 										<div class="quizz__showcase-pattern js-quizz-showcase-pattern"></div>
-										<img src="image/catalog/calculator/calculator_showcase_car.png" alt="" />
 									</div>
 			</div>
-				<div class="quizz__controls">
+				<div class="quizz__controls js-quiz-controls">
 					<button type="button" class="mt-10 btn-next-steps icon-long-arrow-pointing-to-the-right btn btn--inline btn--inline-one btn--yellow js-quizz-btn-next">К следующему шагу</button>
 					<ul class="quizz__steps js-quizz-steps"></ul>
-				</div>
+				</div>	
 
 					<div class="quizz__tab js-quizz-tab js-calc-last-step">
 												<div class="quizz__form-control">
-													<p class="mb-10 h3">Спасибо за ответы!</p>
-													<p class="mb-20 text-normal text--gray">Заполните форму ниже для получения результатов расчета:</p>
-													<input type="text" required name="name" placeholder="Как к вам обращаться?" class="input input--fluid input--outline-highlight" />
-													<input type="tel" id="phone" required name="phone" placeholder="Телефон для консультации" class="input input--fluid input--outline-highlight" />
-													<input type="email" name="email" required placeholder="Электронный ящик для PDF каталога" class="input input--fluid input--outline-highlight" />
-													<button type="submit" class="btn btn--fluid btn--yellow">Получить результат
-														<img src="image/catalog/pdf.png" alt=""></button>
-													<div class="privacy-info"></div>
+													<p class="mb-10 h3">Готово! Введите свой номер телефона и выберите, как должен быть доставлен расчёт</p>
+													<div class="msg-selects">
+														<label class="msg-select msg-sms msg-selected">
+															<input type="radio" name="Sposob-svyazi" value="SMS" class="msg-icon"><i class="far fa-comment-alt"></i></input>
+															<div class="msg-text">CMC</div>
+														</label>
+														<label class="msg-select msg-viber">
+															<input type="radio"name="Sposob-svyazi" value="Viber" class="msg-icon"><i class="fab fa-viber"></i></input>
+															<div class="msg-text">Viber</div>
+														</label>
+														<label class="msg-select msg-whatsapp">
+															<input type="radio" name="Sposob-svyazi" value="Whatsapp" class="msg-icon"><i class="fab fa-whatsapp"></i></input>
+															<div class="msg-text">Whatsapp</div>
+														</label>
+														<label class="msg-select msg-telegram">
+															<input type="radio" name="Sposob-svyazi" value="Telegram" class="msg-icon"><i class="fab fa-telegram-plane"></i></input>
+															<div class="msg-text">Telegram</div>
+														</label>
+														<div class="end-data js-end-data">
+																<input type="tel" id="phone" required name="phone" placeholder="Телефон для консультации" class="last-input input input--fluid input--outline-highlight" />
+															<button type="submit" class="animation btn btn--fluid btn--yellow last-btn">Получить результат
+															<img src="image/catalog/pdf.png" alt=""></button>
+															<div class="privacy-info">Нажимая кнопку отправки, вы даёте согласие на <br> <a href="">обработку персональных данных</a></div>
+															<a class="restart" href="javascript:document.location.reload()">Пройти опрос заново</a>
+														</div>
+														
+													</div>
+													
 												</div>
 											</div>
+
+				<div class="popup">
+						<div class="popup-items col-md-5">
+							<h2>Поздравляем!</h2>
+							<h4><b>Ваш подарок</b> - бесплатный выезда <br> инженера проектировщика +2.5% скидка</h4>
+							<ul>
+								<li><i class="far fa-circle"></i>Выезда бесплатно</li>
+								<li><i class="far fa-circle"></i>Вы получите смету дизайн рекомендации</li>
+								<li><i class="far fa-circle"></i>Скидку до 2.5% на плитку, доставку, укладку</li>
+								<li><i class="far fa-circle"></i>Сейчас свободны 5 замерщиков</li>
+							</ul>
+						</div>
+						<div class="popup-items col-md-4">
+							<h3>Забронируйте скидку</h3>
+							<p>и получите бесплатный выезд <br> инженера проектироващика <br> +2.5% скидку</p>
+							<input type="num" class="js-popup-phone" name="phone" placeholder="Введите телефон" required>
+							<button type="submit" class="btn btn--inline">ЗАБРОНИРОВАТЬ <i class="far fa-calendar-alt"></i></button>
+						</div>
+						<div class="ext"><a class="js-close-popup">Нет, спасибо</a></div>
+						<input type="radio" name="Sposob-svyazi" value="skidka-2.5%" checked>
+				</div>
 		</form>
 
-										
+
 			<div class="calculator-step__end" id="calcStepEnd" style="display: none;">
 			<div class="row">
 				<div class="col-8 m-auto calculator-step__end-inner">
@@ -2757,7 +2886,8 @@ stroke-miterlimit="3" d="M334.05,313.61a10,10,0,0,1-4.64-6l-.91-3.37a10,10,0,0,0
 
 <script>
 $(function(){
-  $("#phone").mask('8 (000) 000-0000');
+  $("#phone").mask('+7 (000) 000-0000');
+  $(".js-popup-phone").mask('+7 (000) 000-0000');
 });
 
 (function(w, d, s, h, id) {
