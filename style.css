@@ -6445,6 +6445,10 @@ svg {
     .header-phone .icon--menu {
         margin-right: 0
     }
+
+    .place{
+        width: 100%;
+    }
 }
 
 .calculator-svg-sprites .user-color-1,
@@ -11423,7 +11427,7 @@ p {
 
 
     .quizz__intro {
-        padding-top: 4%;
+        padding-top: 15%;
         padding-left: 8px;
         padding-right: 8px;
 
@@ -11479,7 +11483,9 @@ p {
 
     .logo {
         position: static;
-        width: 55%;
+        width: 70%;
+        margin-left: 3%;
+        margin-top: 3%;
     }
 
     .btn {
@@ -11513,9 +11519,10 @@ p {
 
 
     .quizz__form-control .btn--yellow {
-        width: 88%;
-        margin-left: 7%;
-    }
+    width: 100%;
+    margin-left: 0;
+    height: 68px;
+}
 
     .h3,
     h3 {
@@ -11568,7 +11575,7 @@ p {
     .quizz__showcase {
         transition: all 1s ease 0s;
         position: relative;
-        min-height: 200px;
+        min-height: 200px!important;
         width: 100%;
         overflow: hidden;
         border-radius: 0;
@@ -11588,19 +11595,66 @@ p {
 
     .quizz__steps {
 
-        text-align: center;
-        vertical-align: bottom;
-        margin-top: 10%;
         position: absolute;
-        float: right;
-        left: 20%;
-        bottom: 3%;
+    bottom: 1%;
 
     }
 
     .quizz__tab-title {
         text-align: center;
         margin: 5% 0 0 0;
+            font-size: 30px!important;
+    }
+
+    .place{
+        width: 100%!important;
+        margin-top: 3%;
+    }
+
+    .popup{
+        background-image: none!important;
+        margin-left: 5%;
+    width: 90%;
+        padding: 0% 2%;
+    }
+
+    .popup-items{
+        width: 100%!important;
+        padding: 5%!important;
+    }
+
+    .ext {
+    margin: 14% 0;
+}
+
+.popup ul {
+    padding: 0;
+    padding-left: 15%;
+    text-align: left;
+}
+
+.popup li {
+    font-size: 13px;
+}
+
+.popup h4 {
+    font-size: 15px!important;
+}
+
+.popup-items:nth-child(1) {
+    text-align: center;
+}
+
+.quizz__form-control .h3 {
+    font-size: 1.1em;
+    line-height: 30px;
+}
+
+.msg-select {
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    width: 75px!important;
     }
 
     /*.btn--yellow {
@@ -11745,22 +11799,16 @@ p {
     }
 
     .quizz__label-product {
-        width: calc(28% - 0rem);
-        padding: 0 2%;
-        margin: 1% 2% 1% 3%;
+            width: calc(32% - 1rem);
+    padding: 10px 2%;
+    margin: 4% 2% 4% 3%;
     }
 }
 
 @media (max-width: 414px) {
     .quizz__steps {
-        text-align: center;
-        vertical-align: bottom;
-        margin-top: 10%;
-        position: absolute;
-        float: right;
-        left: 20%;
-        bottom: 1%;
-        padding: 0;
+       position: absolute;
+    bottom: 1%;
     }
 
     .btn--inline-one {
