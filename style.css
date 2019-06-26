@@ -12369,10 +12369,10 @@ h1, h2, h3, h4{
     text-align: left;
 }
 
-    .place{
-        width: 100%!important;
-        margin-top: 3%;
-    }
+.place {
+    width: 100%!important;
+    margin: 3% 0;
+}
 
 .popup {
     background-image: none!important;
@@ -12648,6 +12648,10 @@ h1, h2, h3, h4{
 
 @media (max-width: 414px) {
 
+    .msg-text {
+    font-size: 12px;
+}
+
     .label-first:nth-child(4) {
     background-size: 63%;
 }
@@ -12747,7 +12751,7 @@ h1, h2, h3, h4{
 }
 
 .msg-select {
-    width: 70px;
+    width: 65px;
 }
 
 
