@@ -8731,7 +8731,8 @@ p {
 .quizz__steps li:before {
     display: inline-block;
     counter-increment: stepperIndex;
-    content: "0"counter(stepperIndex)
+    content: "0"counter(stepperIndex);
+    font-size: 21px;
 }
 
 .quizz__steps li.completed:not(.active) {
@@ -8741,7 +8742,7 @@ p {
 
 .quizz__steps li.active,
 .quizz__steps li:hover {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 24px;
     font-weight: 700;
 }
